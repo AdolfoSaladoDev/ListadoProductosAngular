@@ -24,7 +24,7 @@
       <thead>
         <tr>
           <th>
-            <button class="btn btn-primary">Ver imagen</button>
+            <button class="btn btn-primary" (click)="toggleImage()">{{showImage ? 'Quitar' : 'Ver'}} imagen</button>
           </th>
           <th>Producto</th>
           <th>Código</th>
@@ -39,7 +39,7 @@
      -->
       <tbody>
         <tr *ngFor="let product of products">
-            <td></td>
+            <td><img src={{product.imageUrl}} height="20px" width="20px" *ngIf="showImage"></td>
             <td>{{product.productName}}</td>
             <td>{{product.productCode}}</td>
             <td>{{product.releaseDate}}</td>

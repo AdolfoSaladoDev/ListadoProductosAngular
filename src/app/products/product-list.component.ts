@@ -7,6 +7,7 @@ import {Component} from '@angular/core'
 
 export class ProductListComponent {
     pageTitle: string = 'Listado de producto'
+    showImage: boolean = false;
 
     products: any[] = [
         {
@@ -17,7 +18,7 @@ export class ProductListComponent {
             "description": "Maravilloso enrollador de jardín",
             "price": 32.99,
             "starRating": 4.2,
-            "imageUrl": "assets/images/garden_cart.png"
+            "imageUrl": "assets/android.png"
         },
         {
             "productId": 5,
@@ -27,7 +28,11 @@ export class ProductListComponent {
             "description": "Maravilloso hammer",
             "price": 8.9,
             "starRating": 4.8,
-            "imageUrl": "assets/images/hammer.png"
+            "imageUrl": "assets/android.png"
         }
     ];
+
+    toggleImage(): void {
+        this.showImage = !this.showImage;
+    }
 }
